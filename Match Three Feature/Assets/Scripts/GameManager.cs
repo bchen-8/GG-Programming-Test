@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     public GameObject grandTile;
 
     int[] prizeCount = new int[5];
-
     List<GameObject> boardList = new List<GameObject>();
 
     void Awake()
@@ -27,8 +26,6 @@ public class GameManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
-
-
     }
 
     void Start()
@@ -49,24 +46,35 @@ public class GameManager : MonoBehaviour
         
     }
 
-    #region Methods
+    #region Instantiation
     private void GenerateGrid() //Spawn 3x5 grid of closed boxes, track with a list
     {
-
+        int count = 0;
         for (float i = 3.5f; i >= -3.5f; i -= 3.5f) { //runs down y coords
-
             for (float j = -8f; j <= 8f; j += 4f) { //runs down x coords
-                SpawnBox(j, i);
+                SpawnBox(j, i, count);
+                count++;
             }
         }
     }
 
-    private void SpawnBox(float xCoord, float yCoord) //Spawns a closed box and adds it to the boardList
+    private void SpawnBox(float xCoord, float yCoord, int count) //Spawns a closed box and adds it to the boardList
     {
         GameObject spawnInstance = Instantiate(closedTile, new Vector2(xCoord, yCoord), Quaternion.identity);
+        spawnInstance.GetComponent<ClosedTileManager>().listIndex = count;
         boardList.Add(spawnInstance);
     }
+    #endregion
 
+    #region Click Register
+    public void OpenBox(GameObject obj)
+    {
+        int objIndex = obj.GetComponent<ClosedTileManager>().listIndex;
+        Debug.Log(objIndex);
+    }
+    #endregion
+
+    #region Victory Condition
     private void CheckVictory() //Check for the Victory condition
     {
 
