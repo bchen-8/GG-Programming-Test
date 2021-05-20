@@ -1936,3 +1936,95 @@ System memory in use after: 90.0 MB.
 Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2535.
 Total: 3.637800 ms (FindLiveObjects: 0.365700 ms CreateObjectMapping: 0.100400 ms MarkObjects: 2.318400 ms  DeleteObjects: 0.851700 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001620 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.496 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1819 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2539.
+Total: 3.761800 ms (FindLiveObjects: 0.416900 ms CreateObjectMapping: 0.106300 ms MarkObjects: 2.503100 ms  DeleteObjects: 0.733800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001964 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.524 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1819 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2543.
+Total: 3.616800 ms (FindLiveObjects: 0.358500 ms CreateObjectMapping: 0.103000 ms MarkObjects: 2.441900 ms  DeleteObjects: 0.711400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001727 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.883 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1819 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2547.
+Total: 3.502700 ms (FindLiveObjects: 0.383600 ms CreateObjectMapping: 0.102300 ms MarkObjects: 2.311600 ms  DeleteObjects: 0.703600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001873 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.081 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1819 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2551.
+Total: 4.595500 ms (FindLiveObjects: 0.555700 ms CreateObjectMapping: 0.243500 ms MarkObjects: 3.091000 ms  DeleteObjects: 0.703600 ms)
+

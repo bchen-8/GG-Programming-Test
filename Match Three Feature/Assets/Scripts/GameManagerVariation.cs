@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -84,7 +85,7 @@ public class GameManagerVariation : MonoBehaviour
             }
         }
 
-        //For each integer in prizeCount, add a number of prizes equal to the value within the index to prizeList as prefabs. CURRENTLY BUGGED
+        //Sets up prizeList according to the predetermined outcome from prizeCount
         for (int i = 0; i <= 4; i++) {
             if (prizeCount[i] > 0) {
                 for (int j = 0; j < prizeCount[i]; j++) {
@@ -92,6 +93,15 @@ public class GameManagerVariation : MonoBehaviour
                 }
             }
         }
+
+        //Shuffles prizeList
+        var rand = new System.Random();
+        List<GameObject> tempList = new List<GameObject>();
+        var randomized = prizeList.OrderBy(item => rand.Next());
+        foreach (var value in randomized) {
+            tempList.Add(value);
+        }
+        prizeList = tempList;
 
         foreach (GameObject n in prizeList) {
             Debug.Log(n.name);
