@@ -27,18 +27,24 @@ public class CoinManager : MonoBehaviour
 
     void Start()
     {
-        
+        GenerateBoard();
+        SumCoinValues();
     }
 
-    void GenerateBoard()
+    void GenerateBoard() //Populates the boardList with Coin Values
     {
+        for (int i = 0; i < 15; i++) {
+            boardList[i] = new Symbol(null, 0);
+        }
+
+        string reelPick;
         foreach (Symbol n in boardList) {
-            string reelPick = reelStrip[Random.Range(0, 18)];
+            reelPick = reelStrip[Random.Range(0, 18)];
+            Debug.Log("reelPick = "+reelPick);
             n.name = reelPick;
+
             if (reelPick == "Coin") {
                 n.value = RollTable();
-            } else {
-                n.value = 0;
             }
         }
     }
@@ -47,7 +53,7 @@ public class CoinManager : MonoBehaviour
     {
         int outcome = -1;
         int roll = Random.Range(1, 101);
-        Debug.Log("GenerateOutcome(): Rolled " + roll);
+        Debug.Log("RollTable(): Rolled " + roll);
         if (roll <= 60) {
             outcome = 50;
         } else if (roll > 60 && roll <= 75) {
@@ -61,7 +67,44 @@ public class CoinManager : MonoBehaviour
         } else if (roll > 98 && roll <= 100) {
             outcome = 1000;
         } else {
-            Debug.Log("<color=red> GenerateOutcome(): Number rolled fell outside of bounds. </color>");
+            Debug.Log("<color=red> RollTable(): Number rolled fell outside of bounds. </color>");
+        }
+
+        return outcome;
+    }
+
+    void SumCoinValues()
+    {
+        int sum = 0;
+        int coinCount = 0;
+        foreach (Symbol n in boardList) {
+            if (n.name == "Coin") {
+                coinCount++;
+                sum += n.value;
+                Debug.Log("SumCoinValues(): Adding "+n.value+" to sum, sum now equals "+sum);
+            }
+        }
+
+        if (coinCount == 18) {
+            sum *= RollMultiplier();
+        }
+
+        Debug.Log("Final Coin Value: "+sum);
+    }
+
+    int RollMultiplier()
+    {
+        int outcome = -1;
+        int roll = Random.Range(1, 101);
+        Debug.Log("GenerateOutcome(): Rolled " + roll);
+        if (roll <= 60) {
+            outcome = 2;
+        } else if (roll > 60 && roll <= 80) {
+            outcome = 3;
+        } else if (roll > 80 && roll <= 100) {
+            outcome = 4;
+        } else {
+            Debug.Log("<color=red> RollMultiplier(): Number rolled fell outside of bounds. </color>");
         }
 
         return outcome;
