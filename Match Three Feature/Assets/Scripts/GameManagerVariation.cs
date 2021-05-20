@@ -19,8 +19,10 @@ public class GameManagerVariation : MonoBehaviour
     public GameObject victoryScreen;
     public TextMeshPro victoryText;
 
-    int[] prizeCount = new int[5];
     int prizeListIndex = 0;
+    int victoryCondition = 0;
+    int victoryCount = 0;
+    GameObject[] prizeTypes;
     List<GameObject> boardList = new List<GameObject>();
     List<GameObject> prizeList = new List<GameObject>();
 
@@ -34,6 +36,8 @@ public class GameManagerVariation : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
+
+        prizeTypes = new GameObject[] { miniTile, minorTile, maxiTile, majorTile, grandTile };
     }
 
     void Start()
@@ -56,7 +60,6 @@ public class GameManagerVariation : MonoBehaviour
 
     private void GenerateOutcome() //Determines the outcome of the board
     {
-        GameObject[] prizeTypes = new GameObject[] {miniTile, minorTile, maxiTile, majorTile, grandTile};
         int[] prizeCount = new int[5]; //List keeps track of number of prizes
         int outcome = -1; //Value is set to the winning outcome by the following probability roll
 
@@ -77,6 +80,7 @@ public class GameManagerVariation : MonoBehaviour
             Debug.Log("<color=red> GenerateOutcome(): Number rolled fell outside of bounds. </color>");
         }
         prizeCount[outcome] = 3;
+        victoryCondition = outcome;
         Debug.Log("prizeCount[" + outcome + "] = " + prizeCount[outcome]);
 
         for (int i = 0; i <= 4; i++) { //Sets number of prizes not part of the winning outcome to 0, 1, or 2
@@ -124,6 +128,7 @@ public class GameManagerVariation : MonoBehaviour
         //int objIndex = objScript.listIndex;
 
         GameObject prize = prizeList[prizeListIndex];
+        IncrementVictory();
         prizeListIndex++;
         objScript.RevealPrize(prize);
         CheckVictory();
@@ -133,66 +138,39 @@ public class GameManagerVariation : MonoBehaviour
     {
         boardList[index] = obj;
     }
-
-    /*
-    private GameObject PrizeRoll() //Rolls the probability, increments victory condition array, and returns the appropriate GameObject.
-    {
-        int roll = Random.Range(1, 101);
-        Debug.Log("PrizeRoll(): Rolled " + roll);
-
-        if (roll <= 50) {
-            Debug.Log("PrizeRoll(): Replacing tile with a Mini Tile");
-            prizeCount[0]++;
-            return miniTile;
-        } else if (roll > 50 && roll <= 75) {
-            Debug.Log("PrizeRoll(): Replacing tile with a Minor Tile");
-            prizeCount[1]++;
-            return minorTile;
-        } else if (roll > 75 && roll <= 90) {
-            Debug.Log("PrizeRoll(): Replacing tile with a Maxi Tile");
-            prizeCount[2]++;
-            return maxiTile;
-        } else if (roll > 90 && roll <= 98) {
-            Debug.Log("PrizeRoll(): Replacing tile with a Major Tile");
-            prizeCount[3]++;
-            return majorTile;
-        } else if (roll > 98 && roll <= 100) {
-            Debug.Log("PrizeRoll(): Replacing tile with a Grand Tile");
-            prizeCount[4]++;
-            return grandTile;
-        } else {
-            Debug.Log("<color=red> PrizeRoll(): Number rolled fell outside of bounds. </color>");
-            return null;
-        }
-    }
-    */
     #endregion
 
     #region Victory Condition
+    private void IncrementVictory()
+    {
+        if (prizeList[prizeListIndex].name == prizeTypes[victoryCondition].name) {
+            Debug.Log("IncrementVictory(): "+prizeList[prizeListIndex].name+" is equal to "+ prizeTypes[victoryCondition].name);
+            victoryCount++;
+        }
+    }
+
     private void CheckVictory() //Check for the Victory condition
     {
-        for (int i = 0; i <= 4; i++) {
-            if (prizeCount[i] >= 3) {
-                switch (i) {
-                    case 0:
-                        VictoryCondition("Mini Prize!", "MiniTile(Clone)");
-                        break;
-                    case 1:
-                        VictoryCondition("Minor Prize!", "MinorTile(Clone)");
-                        break;
-                    case 2:
-                        VictoryCondition("Maxi Prize!", "MaxiTile(Clone)");
-                        break;
-                    case 3:
-                        VictoryCondition("Major Prize!", "MajorTile(Clone)");
-                        break;
-                    case 4:
-                        VictoryCondition("Grand Prize!", "GrandTile(Clone)");
-                        break;
-                    default:
-                        Debug.Log("<color=red> CheckVictory(): prizeCount index fell out of bounds. </color>");
-                        break;
-                }
+        if (victoryCount >= 3) {
+            switch (victoryCondition) {
+                case 0:
+                    VictoryCondition("Mini Prize!", "MiniTile(Clone)");
+                    break;
+                case 1:
+                    VictoryCondition("Minor Prize!", "MinorTile(Clone)");
+                    break;
+                case 2:
+                    VictoryCondition("Maxi Prize!", "MaxiTile(Clone)");
+                    break;
+                case 3:
+                    VictoryCondition("Major Prize!", "MajorTile(Clone)");
+                    break;
+                case 4:
+                    VictoryCondition("Grand Prize!", "GrandTile(Clone)");
+                    break;
+                default:
+                    Debug.Log("<color=red> CheckVictory(): prizeCount index fell out of bounds. </color>");
+                    break;
             }
         }
     }
