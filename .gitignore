@@ -35,13 +35,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-Match Three Feature/Logs/AssetImportWorker0.log
-Match Three Feature/Logs/shadercompiler-UnityShaderCompiler.exe0.log
-Match Three Feature/Logs/shadercompiler-UnityShaderCompiler.exe1.log
-Match Three Feature/Logs/shadercompiler-UnityShaderCompiler.exe2.log
-Match Three Feature/Logs/shadercompiler-UnityShaderCompiler.exe3.log
-Match Three Feature/Logs/shadercompiler-UnityShaderCompiler.exe4.log
-Match Three Feature/Logs/shadercompiler-UnityShaderCompiler.exe5.log
-Match Three Feature/Logs/shadercompiler-UnityShaderCompiler.exe6.log
-Match Three Feature/Logs/shadercompiler-UnityShaderCompiler.exe7.log
+Match Three Feature/Logs
 *.log
