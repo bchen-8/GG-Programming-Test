@@ -22,7 +22,6 @@ public class CoinManager : MonoBehaviour
     }
 
     string[] reelStrip = new string[] {"C", "A", "Coin", "D", "B", "A", "B", "C", "Coin", "A", "D", "C", "B", "A", "Coin", "C", "D", "A"}; //size = 18
-
     Symbol[] boardList = new Symbol[15];
 
     void Start()
@@ -49,7 +48,7 @@ public class CoinManager : MonoBehaviour
         }
     }
 
-    int RollTable()
+    int RollTable() //Rolls Random.Range for a coin value and returns it as an int
     {
         int outcome = -1;
         int roll = Random.Range(1, 101);
@@ -73,7 +72,7 @@ public class CoinManager : MonoBehaviour
         return outcome;
     }
 
-    void SumCoinValues()
+    void SumCoinValues() //Sums up and prints the value of all Coins in boardList
     {
         int sum = 0;
         int coinCount = 0;
@@ -85,14 +84,14 @@ public class CoinManager : MonoBehaviour
             }
         }
 
-        if (coinCount == 18) {
+        if (coinCount >= reelStrip.Length) {
             sum *= RollMultiplier();
         }
 
         Debug.Log("Final Coin Value: "+sum);
     }
 
-    int RollMultiplier()
+    int RollMultiplier() //Rolls Random.Range for a multiplier value and returns it as an int
     {
         int outcome = -1;
         int roll = Random.Range(1, 101);
