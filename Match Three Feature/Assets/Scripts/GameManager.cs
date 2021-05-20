@@ -69,8 +69,43 @@ public class GameManager : MonoBehaviour
     #region Click Register
     public void OpenBox(GameObject obj)
     {
-        int objIndex = obj.GetComponent<ClosedTileManager>().listIndex;
-        Debug.Log(objIndex);
+        ClosedTileManager objScript = obj.GetComponent<ClosedTileManager>();
+        int objIndex = objScript.listIndex;
+        //Debug.Log(objIndex);
+
+        GameObject prize = PrizeRoll();
+        objScript.RevealPrize(prize);
+    }
+
+    public void SetPrizeInList(GameObject obj, int index)
+    {
+        boardList[index] = obj;
+    }
+
+    private GameObject PrizeRoll() //Rolls the probability and returns the appropriate GameObject
+    {
+        int roll = Random.Range(1, 101);
+        Debug.Log("PrizeRoll(): Rolled " + roll);
+
+        if (roll <= 50) {
+            Debug.Log("PrizeRoll(): Replacing tile with a Mini Tile");
+            return miniTile;
+        } else if (roll > 50 && roll <= 75) {
+            Debug.Log("PrizeRoll(): Replacing tile with a Minor Tile");
+            return minorTile;
+        } else if (roll > 75 && roll <= 90) {
+            Debug.Log("PrizeRoll(): Replacing tile with a Maxi Tile");
+            return maxiTile;
+        } else if (roll > 90 && roll <= 98) {
+            Debug.Log("PrizeRoll(): Replacing tile with a Major Tile");
+            return majorTile;
+        } else if (roll > 98 && roll <= 100) {
+            Debug.Log("PrizeRoll(): Replacing tile with a Grand Tile");
+            return grandTile;
+        } else {
+            Debug.Log("<color=red> PrizeRoll(): Number rolled fell outside of bounds. </color>");
+            return null;
+        }
     }
     #endregion
 

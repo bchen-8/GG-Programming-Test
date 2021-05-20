@@ -13,14 +13,16 @@ public class ClosedTileManager : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    void Start()
-    {
-        
-    }
-
     void OnMouseDown()
     {
         //Debug.Log(this.name);
         gameManager.OpenBox(gameObject);
+    }
+
+    public void RevealPrize(GameObject prize)
+    {
+        GameObject revealedPrize = Instantiate(prize, this.transform.position, Quaternion.identity);
+        gameManager.SetPrizeInList(revealedPrize, listIndex);
+        Destroy(this.gameObject);
     }
 }
