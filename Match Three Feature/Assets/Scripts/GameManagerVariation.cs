@@ -84,9 +84,12 @@ public class GameManagerVariation : MonoBehaviour
             }
         }
 
-        foreach (int n in prizeCount) { //For each integer in prizeCount, add a number of prizes equal to the value within the index to prizeList as prefabs.
-            for (int i = 0; i < prizeCount[n]; i++) {
-                prizeList.Add(prizeTypes[n]);
+        //For each integer in prizeCount, add a number of prizes equal to the value within the index to prizeList as prefabs. CURRENTLY BUGGED
+        for (int i = 0; i <= 4; i++) {
+            if (prizeCount[i] > 0) {
+                for (int j = 0; j < prizeCount[i]; j++) {
+                    prizeList.Add(prizeTypes[i]);
+                }
             }
         }
 
