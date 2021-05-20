@@ -2933,3 +2933,112 @@ System memory in use after: 90.6 MB.
 Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2702.
 Total: 3.918200 ms (FindLiveObjects: 0.465400 ms CreateObjectMapping: 0.111400 ms MarkObjects: 2.611600 ms  DeleteObjects: 0.728400 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001808 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.675 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.2 MB.
+System memory in use after: 90.6 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2706.
+Total: 4.468200 ms (FindLiveObjects: 0.460600 ms CreateObjectMapping: 0.114000 ms MarkObjects: 3.005600 ms  DeleteObjects: 0.885700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2851.822680 seconds.
+  path: Assets/_Scenes/MatchThreeVariation.unity
+  artifactKey: Guid(d4e416cc3a95c4844be48db79295f9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/MatchThreeVariation.unity using Guid(d4e416cc3a95c4844be48db79295f9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '525cb13e5b69d877d48e36aba15f8897') in 0.026028 seconds
+  Import took 0.031046 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004781 seconds.
+  path: Assets/_Scenes/MatchThreeVariation.unity
+  artifactKey: Guid(d4e416cc3a95c4844be48db79295f9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/MatchThreeVariation.unity using Guid(d4e416cc3a95c4844be48db79295f9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '525cb13e5b69d877d48e36aba15f8897') in 0.004988 seconds
+  Import took 0.008982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.368462 seconds.
+  path: Assets/_Scenes/WYSIWYG.unity
+  artifactKey: Guid(042a694f3060b144682a589f5c2802b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/WYSIWYG.unity using Guid(042a694f3060b144682a589f5c2802b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10fabaea2a292f6fda5302f54cf23758') in 0.012566 seconds
+  Import took 0.017292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.353654 seconds.
+  path: Assets/Scripts/CoinManager.cs
+  artifactKey: Guid(a8f1f7f2f6a1f5249abafe39269ebd48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CoinManager.cs using Guid(a8f1f7f2f6a1f5249abafe39269ebd48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dfff2d3291edd3e75993debe7aaf6e5') in 0.015015 seconds
+  Import took 0.021145 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001800 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.645 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.3 MB.
+System memory in use after: 90.7 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2711.
+Total: 4.812200 ms (FindLiveObjects: 0.413400 ms CreateObjectMapping: 0.123100 ms MarkObjects: 3.412400 ms  DeleteObjects: 0.861200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001607 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.508 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.3 MB.
+System memory in use after: 90.7 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2715.
+Total: 3.801700 ms (FindLiveObjects: 0.422100 ms CreateObjectMapping: 0.130600 ms MarkObjects: 2.519000 ms  DeleteObjects: 0.728400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 900.394797 seconds.
+  path: Assets/Scripts/CoinManager.cs
+  artifactKey: Guid(a8f1f7f2f6a1f5249abafe39269ebd48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CoinManager.cs using Guid(a8f1f7f2f6a1f5249abafe39269ebd48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62e64f4a97a0db58d844f4ed385a0471') in 0.012768 seconds
+  Import took 0.016881 seconds .
+
