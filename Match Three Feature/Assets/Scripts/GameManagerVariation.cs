@@ -20,6 +20,7 @@ public class GameManagerVariation : MonoBehaviour
     public TextMeshPro victoryText;
 
     int[] prizeCount = new int[5];
+    int prizeListIndex = 0;
     List<GameObject> boardList = new List<GameObject>();
     List<GameObject> prizeList = new List<GameObject>();
 
@@ -111,18 +112,19 @@ public class GameManagerVariation : MonoBehaviour
     private void SpawnBox(float xCoord, float yCoord, int count) //Spawns a closed box and adds it to the boardList
     {
         GameObject spawnInstance = Instantiate(closedTile, new Vector2(xCoord, yCoord), Quaternion.identity);
-        spawnInstance.GetComponent<ClosedTileManager>().listIndex = count;
+        spawnInstance.GetComponent<ClosedTileManagerVariant>().listIndex = count;
         boardList.Add(spawnInstance);
     }
     #endregion
 
     #region Click Register
-    public void OpenBox(GameObject obj) //Player input tracked by OnMouseDown() in ClosedTileManager
+    public void OpenBox(GameObject obj) //Player input tracked by OnMouseDown() in ClosedTileManagerVariant
     {
-        ClosedTileManager objScript = obj.GetComponent<ClosedTileManager>();
-        int objIndex = objScript.listIndex;
+        ClosedTileManagerVariant objScript = obj.GetComponent<ClosedTileManagerVariant>();
+        //int objIndex = objScript.listIndex;
 
-        GameObject prize = PrizeRoll(); //TODO: Read off of the List prizeList instead
+        GameObject prize = prizeList[prizeListIndex];
+        prizeListIndex++;
         objScript.RevealPrize(prize);
         CheckVictory();
     }
@@ -132,6 +134,7 @@ public class GameManagerVariation : MonoBehaviour
         boardList[index] = obj;
     }
 
+    /*
     private GameObject PrizeRoll() //Rolls the probability, increments victory condition array, and returns the appropriate GameObject.
     {
         int roll = Random.Range(1, 101);
@@ -162,6 +165,7 @@ public class GameManagerVariation : MonoBehaviour
             return null;
         }
     }
+    */
     #endregion
 
     #region Victory Condition
