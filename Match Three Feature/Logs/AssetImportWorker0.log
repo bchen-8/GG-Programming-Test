@@ -177,3 +177,80 @@ System memory in use after: 89.3 MB.
 Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2266.
 Total: 3.425500 ms (FindLiveObjects: 0.334100 ms CreateObjectMapping: 0.097200 ms MarkObjects: 2.345000 ms  DeleteObjects: 0.647600 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001732 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.548 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.0 MB.
+System memory in use after: 89.3 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2270.
+Total: 3.642000 ms (FindLiveObjects: 0.341300 ms CreateObjectMapping: 0.102200 ms MarkObjects: 2.540200 ms  DeleteObjects: 0.656600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001694 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.529 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.57 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.0 MB.
+System memory in use after: 89.3 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2274.
+Total: 3.455100 ms (FindLiveObjects: 0.372400 ms CreateObjectMapping: 0.099000 ms MarkObjects: 2.292800 ms  DeleteObjects: 0.689300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001658 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.570 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.0 MB.
+System memory in use after: 89.3 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2278.
+Total: 3.319600 ms (FindLiveObjects: 0.324400 ms CreateObjectMapping: 0.101100 ms MarkObjects: 2.216400 ms  DeleteObjects: 0.676100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1512.057503 seconds.
+  path: Assets/Prefabs/ClosedTile.prefab
+  artifactKey: Guid(c37bcf82ea84b154fa0b0764f4a2251d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ClosedTile.prefab using Guid(c37bcf82ea84b154fa0b0764f4a2251d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ef617668f366dcb97f243d2119838bd') in 0.107060 seconds
+  Import took 0.112343 seconds .
+

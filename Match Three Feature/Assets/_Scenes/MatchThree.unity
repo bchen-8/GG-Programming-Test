@@ -235,6 +235,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1312dfb7973cc314c92a79f972050c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closedTile: {fileID: 5908333382790238041, guid: c37bcf82ea84b154fa0b0764f4a2251d, type: 3}
+  miniTile: {fileID: 1581567252279952594, guid: 7ecb3bdb3cbe89243873984822e7b392, type: 3}
+  minorTile: {fileID: 2900678402000575010, guid: adaff1019c82dde4db4df4f827b5daa2, type: 3}
+  maxiTile: {fileID: 2018967728202281659, guid: 691a8d3ed7ea6dd41bc8cca1b0a14f34, type: 3}
+  majorTile: {fileID: 1665386519506891761, guid: d2ea9dfc638334e44bc516bfd8d88685, type: 3}
+  grandTile: {fileID: 821617558913633124, guid: 086d59400b6ee6643b2e91819fbcc0ba, type: 3}
 --- !u!4 &1984526569
 Transform:
   m_ObjectHideFlags: 0
