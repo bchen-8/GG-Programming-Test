@@ -121,19 +121,19 @@ public class GameManager : MonoBehaviour
             if (prizeCount[i] >= 3) {
                 switch (i) {
                     case 0:
-                        VictoryCondition("Mini Prize!");
+                        VictoryCondition("Mini Prize!", "MiniTile(Clone)");
                         break;
                     case 1:
-                        VictoryCondition("Minor Prize!");
+                        VictoryCondition("Minor Prize!", "MinorTile(Clone)");
                         break;
                     case 2:
-                        VictoryCondition("Maxi Prize!");
+                        VictoryCondition("Maxi Prize!", "MaxiTile(Clone)");
                         break;
                     case 3:
-                        VictoryCondition("Major Prize!");
+                        VictoryCondition("Major Prize!", "MajorTile(Clone)");
                         break;
                     case 4:
-                        VictoryCondition("Grand Prize!");
+                        VictoryCondition("Grand Prize!", "GrandTile(Clone)");
                         break;
                     default:
                         Debug.Log("<color=red> CheckVictory(): prizeCount index fell out of bounds. </color>");
@@ -143,8 +143,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void VictoryCondition(string prizeText)
+    private void VictoryCondition(string prizeText, string prizeType)
     {
+        //Clears non-relevant prizes and unopened boxes
+        foreach (GameObject n in boardList) {
+            if (n.name != prizeType) {
+                Destroy(n);
+            }
+        }
+
+        //Sets up and reveals victory screen
         victoryText.text = prizeText;
         victoryScreen.SetActive(true);
     }
